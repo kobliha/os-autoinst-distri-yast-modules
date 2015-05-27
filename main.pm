@@ -132,7 +132,7 @@ if ( !defined get_var( "YAST_SW_NO_SUMMARY" ) ) {
 set_var(uc(get_var('DESKTOP')), 1);
 
 # now Plasma 5 is default KDE desktop
-if ( check_var( 'DESKTOP', 'kde' ) ) {
+if (check_var( 'DESKTOP', 'kde' ) && check_var('VERSION', 'Tumbleweed')) {
     set_var("PLASMA5", 1);
 }
 
@@ -159,7 +159,7 @@ if (get_var("YAST_HEAD")) {
 }
 
 # Run all the existent tests
-#loadtest "yast_modules/yast.pm";
+loadtest "yast_modules/yast.pm";
 
 # Shutdown the system
 loadtest "setup/shutdown.pm";
