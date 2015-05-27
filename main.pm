@@ -160,6 +160,7 @@ if (get_var("YAST_HEAD")) {
 
 # Run all the existent tests
 loadtest "yast_modules/yast.pm";
+loadtest "yast_modules/yast2_snapper.pm";
 
 # Shutdown the system
 loadtest "setup/shutdown.pm";
